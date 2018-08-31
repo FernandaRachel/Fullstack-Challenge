@@ -1,0 +1,31 @@
+<div class="flex justify-content-center">
+    <h3 class="text-center">DADOS</h3>
+    <p class="text-center">Lorem ipsum</p>
+</div>
+<div class="row">
+    <div class="col-md-6">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobrenome</th>
+                    <th scope="col">Participação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let u of user; let i = index ">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{u.name}}</td>
+                    <td>{{u.fullName}}</td>
+                    <td>{{u.participacao}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+</div>
