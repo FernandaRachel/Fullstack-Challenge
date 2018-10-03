@@ -6,7 +6,7 @@ import { Route } from '../../../node_modules/@angular/compiler/src/core';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
 

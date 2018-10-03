@@ -1,11 +1,21 @@
-.form-control-modified {
-    display: block;
+
+@import '~compass-mixins/lib/compass/css3';
+
+$cor-fonte:#495057;
+$form-control: ".form-control-modified";
+
+@mixin tamanho {
     width: 100%;
     height: calc(2.25rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    color: #495057;
+}
+#{$form-control} {
+    display: block;
+    @include tamanho;
+    @include opacity(0.8);
+    color: $cor-fonte;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
