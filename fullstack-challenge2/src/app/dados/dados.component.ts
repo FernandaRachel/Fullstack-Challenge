@@ -22,9 +22,6 @@ export class DadosComponent implements OnInit {
     this.getDataFromAPI()
   }
 
-
-
-
   getDataFromAPI() {
     let participacaoTotal = 0.0;
     let listaux: Users[] = [];

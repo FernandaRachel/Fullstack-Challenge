@@ -1,22 +1,23 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed } from '@angular/core/testing';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form.component';
+import { DadosService } from '../dados/service/dados-service.service';
 
 describe('FormComponent', () => {
   let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
-    })
-    .compileComponents();
-  }));
+  let formBuilder: jasmine.SpyObj<FormBuilder>;
+  let userService: jasmine.SpyObj<DadosService>;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    TestBed.configureTestingModule({
+      imports: [
+        ReactiveFormsModule
+      ]
+    })
+    formBuilder = jasmine.createSpyObj("FormBuilder", ["group"]);
+    userService = jasmine.createSpyObj("DadosService", ["postUser"]);
+
+    component = new FormComponent(formBuilder, userService);
   });
 
   it('should be created', () => {

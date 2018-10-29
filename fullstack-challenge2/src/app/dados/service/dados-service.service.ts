@@ -7,11 +7,10 @@ const url = 'http://localhost:3000/api/user';
 @Injectable()
 export class DadosService {
 
-  constructor(private http: HttpClient) { }
+  constructor(@Injectable() private http: HttpClient) { }
 
 
   getUser() {
-    debugger
     return this.http.get(url);
   }
 
