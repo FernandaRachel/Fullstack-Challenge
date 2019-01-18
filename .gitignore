@@ -1,2 +1,3 @@
-fullstack-challenge2/package-lock.json
-./node_modules/
+./fullstack-challenge2/package-lock.json
+./api/node_modules/
+./fullstack-challenge2/node_modules/
