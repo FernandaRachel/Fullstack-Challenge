@@ -22,3 +22,26 @@ $form-control: ".form-control-modified";
     /* border-radius: .25rem; */
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
+%teste1{
+  color:red;
+}
+
+%teste2{
+  background-color:#f4f;
+}
+@mixin teste {
+  color:#4957;
+}
+@mixin teste2 {
+  color:#fefe;
+}
+
+@mixin teste2 {
+  background-color:#f4f;
+}
+
+.menu{
+  @include teste;
+  @extend %teste1, %teste2;
+}

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Users } from '../model/user';
 
-const url = 'http://localhost:3000/api/user';
+const url = 'http://localhost:3000/api/users';
 
 @Injectable()
 export class DadosService {

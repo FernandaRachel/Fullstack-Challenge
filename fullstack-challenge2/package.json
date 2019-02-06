@@ -28,6 +28,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "ng2-charts": "^1.6.0",
     "rxjs": "^6.3.3",
+    "winston": "^3.2.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

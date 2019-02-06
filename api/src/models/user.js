@@ -1,4 +1,4 @@
-const mongoose = require('../database');
+const mongoose = require('../connectionFactory');
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -15,6 +15,8 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-const User = mongoose.model('User', UserSchema);
+/* Ele cria a collection caso ela não exista e adiciona 
+Caso exista ele adiciona na collection */
+const User = mongoose.model('university_students', UserSchema);
 
 module.exports = User

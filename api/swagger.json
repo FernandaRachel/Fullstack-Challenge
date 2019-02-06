@@ -1,0 +1,71 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "USERS API",
+    "description": "A simple API to list users"
+  },
+  "schemes": [
+    "https"
+  ],
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Gets all users",
+        "description": "Returns a list of all users existing.",
+        "responses": {
+          "200": {
+            "description": "A list of uers",
+            "schema": {
+              "type": "array",
+              "items": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Fernanda"
+                  },
+                  "fullName": {
+                    "type": "string",
+                    "example": "Fernanda Tavares"
+                  },
+                  "participacao": {
+                    "type": "number",
+                    "example": "100"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Insert one user into users database",
+        "description": "Insert only one user at time",
+        "responses": {
+          "200": {
+            "description": "User creation succeed",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Fernanda"
+                },
+                "fullName": {
+                  "type": "string",
+                  "example": "Fernanda Tavares"
+                },
+                "participacao": {
+                  "type": "number",
+                  "example": "100"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
