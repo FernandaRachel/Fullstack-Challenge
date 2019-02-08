@@ -1,4 +1,4 @@
-const mongoose = require('../connectionFactory');
+const mongoose = require('../index');
 
 const UserSchema = new mongoose.Schema({
     name: {
